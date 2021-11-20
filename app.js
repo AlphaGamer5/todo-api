@@ -18,6 +18,17 @@ const serverAndDb = async () => {
       filename: dbPath,
       driver: sqlite3.Database,
     });
+    // const query = `
+    //         CREATE TABLE IF NOT EXISTS todo (
+    //             id INTEGER PRIMARY KEY AUTOINCREMENT,
+    //             todo TEXT,
+    //             priority TEXT,
+    //             status TEXT
+    //         )
+    //     ;`;
+    // const table = await db.run(query);
+    // console.log("table created...");
+
     app.listen(PORT, () => {
       console.log(`Server started at http://localhost:${PORT}`);
     });
